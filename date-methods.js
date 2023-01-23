@@ -13,8 +13,22 @@ console.log(currentDay);
 // Uren: 16 (als er een vier in de klok zit op het moment van aanroepen)
 // Minuten: 36 (als het 16:36 is op het moment van aanroepen)
 
+const currentDate= new Date();
 
+console.log(currentDate.getHours());
+console.log(currentDate.getMinutes());
 
 /* Opdracht 2 */
 // Format het date-object dat je bij de vorige vraag hebt gemaakt naar een leesbare datum
 // ---- Verwachte uitkomst: Tue Apr 06 2021 (afhankelijk van het moment)
+
+const longOptions = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+};
+
+const dutchDate = currentDate.toLocaleDateString('nl-NL', longOptions);
+
+console.log(dutchDate);
